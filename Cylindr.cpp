@@ -37,13 +37,13 @@ double Cylindr::get_height()
 {
     return this->height;
 }
-
+/*
 void Cylindr::Draw_cyl(GLUquadricObj* g_pGluQuadObj)
 {
     SetMaterialAndLight0(POINT);
     gluCylinder(g_pGluQuadObj, r_cyl, r_cyl, height, 32, 1);
 }
-
+*/
 Cylindr::Cylindr()
 {
     set_pt_cyl(0, 0, 0);
@@ -65,19 +65,3 @@ void Cylindr::CorrectValues()
     if (this->height <= 0)
         set_height(g_sceneWidth - g_sceneWidth / 8.);
 }
-
-void Cylindr::draw_cyl()
-{
-        SetMaterialAndLight0(POINT);
-        gluCylinder(g_pGluQuadObj, this->r_cyl, this->r_cyl, this->height, 32, 1);
-}
-
-/*
-Cylindr()
-{
-    Cylindr::set_pt_cyl(0, 0, 0);
-    Cylindr::set_pt_cyl()
-    this->set_r_cyl(g_sceneWidth / 4);
-    this->set_height(g_sceneWidth - g_sceneWidth / 8);
-}
-*/

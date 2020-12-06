@@ -47,5 +47,6 @@
 //#include "draw_figure.h"
 #include "inters.h"
 #include "draw_figure.h"
+#include "Cylindr.h"
 
 #endif // !WINDOWSPROJECT5_H

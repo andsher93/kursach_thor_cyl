@@ -3,7 +3,7 @@
 #define DRAW_FIGURE_H
 
 
-//#include "WindowsProject5.h"
+#include "WindowsProject5.h"
 
 extern GLUquadricObj* g_pGluQuadObj;
 extern float g_sceneWidth;
@@ -58,6 +58,12 @@ void DrawCylinder()
 {
 	SetMaterialAndLight0(POINT);
 	gluCylinder(g_pGluQuadObj, g_sceneWidth / 4, g_sceneWidth / 4, g_sceneWidth - g_sceneWidth / 8, 32, 1);
+}
+
+void DrawCylindre(Cylindr cyl)
+{
+	SetMaterialAndLight0(POINT);
+	gluCylinder(g_pGluQuadObj, cyl.get_r_cyl(), cyl.get_r_cyl(), cyl.get_height(), 32, 1);
 }
 
 int Draw_inters(POINT3D Mas_output[2], POINT3D krug_rez)
